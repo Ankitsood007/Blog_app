@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+
+<div class="ui main test container segment">
+
+<div class="ui huge header"><%= blog.title %> </div>
+   <div class="ui top attached ">
+<div class="item">
+
+<img class="ui centered rounded image" src="<%= blog.image %>"> 
+<p> <%-blog.body%> </p>
+
+<form action="/blogs/<%=blog._id%>?_method=DELETE"  method="POST">
+<button class="ui red basic button">DELETE</button>
+</form>
+
+<a href="/blogs/<%=blog._id%>/edit"><button id="di" class ="ui violet basic button">EDIT</button></a>
+</div>
+
+
+ 
+  
+</div>
+
+<% include ./partials/header %>
+
